@@ -1,0 +1,161 @@
+body{
+    font-family:'Arial',sans-serif;
+    text-align:center;
+    background: linear-gradient(145deg, #ffe6cc, #fff0f5);
+    margin:0;
+    padding:10px;
+}
+
+h1{
+    font-size:38px;
+    color:#ff6600;
+    text-shadow:2px 2px #fff;
+}
+
+.tabs{
+    margin:20px 0;
+}
+
+.tab-btn{
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+    margin:0 5px;
+    background: #ffcc99;
+    color:#000;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.tab-btn.active{
+    background:#ff9966;
+    color:white;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.scoreboard{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    font-size:20px;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:10px;
+}
+
+#board{
+    width:360px;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns:repeat(3,120px);
+    gap:10px;
+}
+
+.cell{
+    width:120px;
+    height:120px;
+    background: linear-gradient(145deg,#fff0f0,#ffe6e6);
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80px;
+    cursor:pointer;
+    box-shadow:2px 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.cell:hover{
+    transform: scale(1.08);
+    background: linear-gradient(145deg,#ffd9d9,#ffb3b3);
+}
+
+.X{
+    color:red;
+    animation:pop 0.2s ease;
+}
+
+.O{
+    color:blue;
+    animation:pop 0.2s ease;
+}
+
+@keyframes pop{
+    0%{transform:scale(0)}
+    100%{transform:scale(1)}
+}
+
+button{
+    background: linear-gradient(45deg,#ff9933,#ff6600);
+    border:none;
+    padding:12px 25px;
+    font-size:16px;
+    border-radius:12px;
+    cursor:pointer;
+    margin-top:10px;
+    color:white;
+    font-weight:bold;
+    box-shadow:2px 2px 8px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    background: linear-gradient(45deg,#ff6600,#ff3300);
+}
+
+
+.settings-container{
+    display:inline-block;
+    background: linear-gradient(145deg,#fff0f5,#ffe6cc);
+    padding:20px;
+    border-radius:20px;
+    box-shadow:3px 3px 15px rgba(0,0,0,0.2);
+}
+
+.settings-container label{
+    display:block;
+    margin:10px;
+    font-weight:bold;
+    font-size:16px;
+    color:#333;
+}
+
+select,input[type="checkbox"]{
+    margin-left:5px;
+    padding:5px;
+    font-size:14px;
+    border-radius:6px;
+    border:1px solid #ff9966;
+    background:#fff7f7;
+}
+
+#applySettings{
+    margin-top:15px;
+    font-size:16px;
+    padding:10px 20px;
+    background: linear-gradient(45deg,#ff99cc,#ff6600);
+}
+
+#applySettings:hover{
+    background: linear-gradient(45deg,#ff66aa,#ff3300);
+}
+
+@media(max-width:500px){
+    #board{
+        width:260px;
+        grid-template-columns:repeat(3,80px);
+    }
+    .cell{
+        width:80px;
+        height:80px;
+        font-size:60px;
+    }
+}
