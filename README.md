@@ -51,10 +51,7 @@ e.json
 ## 🚀 Запуск проекта
 
 1. Склонируйте репозиторий
-
-```
-[
-](https://sezim673.github.io/tic-tac-toe/)```
+(https://sezim673.github.io/tic-tac-toe/)
 
 2. Откройте проект
 
